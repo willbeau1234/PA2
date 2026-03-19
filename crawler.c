@@ -84,7 +84,8 @@ FileEntry* build_file_list_bfs(const char* root, FileEntry* prev_snap_files)
                 snprintf(new_entry->path, sizeof(new_entry->path), "%s/%s", current->path, entry->d_name);
                 new_entry->size = st.st_size;
                 new_entry->mtime = st.st_mtime;
-                new_entry->is_directory = S_ISDIR(st.st_mode);
+                new_entry->is_directory = S_ISDIR(st.st
+                    _mode);
                 new_entry->next = NULL;
                 tail->next = new_entry;
                 tail = new_entry;
