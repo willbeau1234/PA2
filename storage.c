@@ -82,7 +82,7 @@ void write_blob_to_vault(const char* filepath, BlockTable* block)
             exit(1);
         }
 
-        block -> size += (uint32_t)i;
+        block -> compressed_size += (uint32_t)i;
     }
 
     fclose(in);

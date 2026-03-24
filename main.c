@@ -51,7 +51,7 @@ void mgit_init()
         exit(1);
     }
 
-    if (mkdir(".mgit/snapshots", 0775) < 0) {
+    if (mkdir(".mgit/snapshots", 0755) < 0) {
         perror("mkdir .mgit/snapshots");
         exit(1);
     }
